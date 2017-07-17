@@ -13,17 +13,32 @@ export class EmpleadoComponent{
     public empleado:Empleado;
     public trabajadores:Array<Empleado>;
 
+    public trabajador_externo:boolean;
+
+    public color:string;
+    public color_seleccionado:string;
+
     constructor(){
         this.empleado = new Empleado('David Romanillos',42,'Programador',true);
         this.trabajadores = [
-            new Empleado('David Romanillos',42,'Programador',true);
-            new Empleado('Sergio Mestre',41,'Programador',true);
-            new Empleado('Angel Luis Lasierra',52,'Gerente',true);
+            new Empleado('Sergio Mestre',41,'Programador',false),
+            new Empleado('David Romanillos',42,'Programador',true),
+            new Empleado('Angel Luis Lasierra',52,'Gerente',true)
         ];
+        this.trabajador_externo = true;
+        this.color = 'blue';
+        this.color_seleccionado = '#CCC';
     }
 
     ngOnInit(){
         console.log(this.trabajadores);
 
+    }
+
+    cambiarExterno(valor){
+        this.trabajador_externo = valor;
+    }
+    showLog(){
+        console.log(this.color_seleccionado)
     }
 }

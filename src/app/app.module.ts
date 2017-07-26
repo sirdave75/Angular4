@@ -10,19 +10,23 @@ import { EmpleadoComponent } from './empleado/empleado.component';
 import { HomeComponent } from './home/home.component';
 import { ContactoComponent } from './contacto/contacto.component';
 
+import { ConversorPipe } from './pipes/conversor.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
     FrutaComponent,
     EmpleadoComponent,
     HomeComponent,
-    ContactoComponent
+    ContactoComponent,
+    ConversorPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]

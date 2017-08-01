@@ -16,6 +16,8 @@ export class PlantillasComponent{
         tematica : 'Album familiar'
     }
 
+    public datos_del_hijo;
+
     constructor(){
         this.titulo = "Pantillas ngTemplate en Angular";
         this.administrador = true;
@@ -23,5 +25,9 @@ export class PlantillasComponent{
 
     cambiar(value){
         this.administrador = value;
+    }
+    recibirDatos(event) {
+        console.log(event.nombre);
+        this.datos_del_hijo = event;
     }
 }

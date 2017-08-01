@@ -9,6 +9,12 @@ import {Component} from '@angular/core';
 export class PlantillasComponent{
     public titulo: string;
     public administrador;
+    public dato_externo =  "David Romanillos";
+    public identity = {
+        id: 1,
+        web: 'sildaviaweb.com',
+        tematica : 'Album familiar'
+    }
 
     constructor(){
         this.titulo = "Pantillas ngTemplate en Angular";

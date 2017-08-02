@@ -9,7 +9,7 @@ import { Component, Input, Output, EventEmitter} from '@angular/core';
                 {{propiedad_uno}}
             </li>
             <li>
-                {{propiedad_dos.web}}
+                {{propiedad_dos.tematica}}
             </li>
         </ul>
         <button (click)="enviar($event)">Enviar datos al padre</button>
@@ -29,14 +29,15 @@ export class HijoComponent{
         this.title = 'Componente Hijo';
     }
 
-    ngOnInit(){
+    ngOnInit() {
         console.log(this.propiedad_uno);
         console.log(this.propiedad_dos);
     }
 
-    enviar(event){
+    enviar(event) {
         this.desde_el_hijo.emit({
                 nombre: 'David Romanillos WEB',
-                web: 'sildaviaweb.com'});
+                web: 'sildaviaweb.com'
+        });
     }
 }
